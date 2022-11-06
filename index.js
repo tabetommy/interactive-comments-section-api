@@ -70,7 +70,7 @@ app.delete('/users/:user', (req,res)=>{
 });
 
 
-app.listen(PORT,(err)=>{
+app.listen((process.env.PORT || 5000),(err)=>{
     if(err) console.log(err);
     console.log('comments app listening on port 3000')
 });
