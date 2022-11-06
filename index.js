@@ -20,11 +20,13 @@ app.get('/', (req,res)=>{
    res.sendFile('public/index1.html')
 })
 
+//get user by username
 app.get('/users/:user',(req,res)=>{
     Users.findOne({username:req.params.user})
     .then(user=>res.json(user))
     .catch(err=>res.send(err))
   });
+
   
 //create comment
 app.post('/users/:user', (req, res)=>{
@@ -37,10 +39,10 @@ app.post('/users/:user', (req, res)=>{
     .catch(err=>{
         console.log(err);
         res.status(500).send('Error' + err);
-    })
-    
-    
+    })    
 });
+
+
 
 //update comment
 app.put('/users/:user',(req,res)=>{
