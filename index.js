@@ -12,12 +12,12 @@ app.use(express.static('public'))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(morgan('common'));
-mongoose.connect('mongodb://localhost:27017/commentsSection', { useNewUrlParser: true, useUnifiedTopology: true });
+// mongoose.connect('mongodb://localhost:27017/commentsSection', { useNewUrlParser: true, useUnifiedTopology: true });y
 app.use(express.static('public'));
 
       
 app.get('/', (req,res)=>{
-   res.sendFile('public/index1.html')
+   res.sendFile('public/index.html')
 })
 
 //get user by username
