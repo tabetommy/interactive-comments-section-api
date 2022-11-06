@@ -4,8 +4,7 @@ const bodyParser=require('body-parser');
 const morgan=require('morgan');
 const mongoose=require('mongoose');
 const Models=require('./models.js');
-const Users = Models.User
-const PORT= 5000;
+const Users = Models.User;
 
 
 app.use(express.static('public'))
@@ -70,8 +69,8 @@ app.delete('/users/:user', (req,res)=>{
     })
 });
 
-
-app.listen((process.env.PORT || 5000),(err)=>{
+const PORT =process.env.PORT || 3000;
+app.listen(PORT,(err)=>{
     if(err) console.log(err);
     console.log('comments app listening on port 3000')
 });
