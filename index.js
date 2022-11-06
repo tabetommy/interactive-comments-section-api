@@ -5,14 +5,14 @@ const morgan=require('morgan');
 const mongoose=require('mongoose');
 const Models=require('./models.js');
 const Users = Models.User
-const PORT= 3000;
+const PORT= 5000;
 
 
 app.use(express.static('public'))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(morgan('common'));
-mongoose.connect('mongodb://localhost:27017/commentsSection', { useNewUrlParser: true, useUnifiedTopology: true });y
+// mongoose.connect('mongodb://localhost:27017/commentsSection', { useNewUrlParser: true, useUnifiedTopology: true });y
 app.use(express.static('public'));
 
       
