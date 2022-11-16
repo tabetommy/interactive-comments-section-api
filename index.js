@@ -5,9 +5,10 @@ const morgan=require('morgan');
 const mongoose=require('mongoose');
 const Models=require('./models.js');
 const Users = Models.User;
+const cors = require('cors');
 
-
-app.use(express.static('public'))
+app.use(cors());
+app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(morgan('common'));
